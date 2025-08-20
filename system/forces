@@ -1,0 +1,29 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      forces;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type            forces;
+functionObjectLibs ("libforces.so");
+patches         (cylinder);         // The patch to evaluate forces on
+rho             rhoInf;
+rhoInf          1;                  // Constant density for incompressible
+CofR            (3 0 0.5);          // Center of cylinder
+outputControl   timeStep;
+outputInterval  1;
+
+// ************************************************************************* //

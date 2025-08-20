@@ -1,0 +1,32 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      probes;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+fields
+(
+    U
+);
+
+probeLocations
+(
+    (4.0 0.2 0.5)    // Wake centerline, 1 m downstream of cylinder
+    (4.0 0.25 0.5)   // Slightly offset upward
+    (4.0 0.15 0.5)   // Slightly offset downward
+);
+
+// ************************************************************************* //

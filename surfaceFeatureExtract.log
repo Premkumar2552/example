@@ -1,0 +1,89 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _f00230df-20250528 OPENFOAM=2412 patch=250528 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Aug 20 2025
+Time   : 13:18:18
+Host   : ip-172-31-2-15.eu-west-2.compute.internal
+PID    : 556492
+I/O    : uncollated
+Case   : /mnt/simulations/re200/40steps
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : cylinder.stl
+Output       : cylinder
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 160 in 1 region(s)
+Vertices     : 82
+Bounding Box : (2.80059 -4.43763e-17 0.300147) (3.2 1 0.699853)
+
+Constructing feature set from included angle 120
+Selecting edges based purely on geometric tests: yes
+
+Initial Feature set:
+    points : 0
+    edges  : 82
+    of which
+        region edges   : 0
+        external edges : 82
+        internal edges : 0
+
+Final Feature set:
+    points : 82
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 0
+        non-feature        : 82
+    edges  : 82
+    of which
+        external edges     : 82
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder"
+Writing 0 convex feature points to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_mixedFeaturePtsStructure.obj"
+Writing 82 external edges to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_externalEdges.obj"
+Writing 0 internal edges to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_internalEdges.obj"
+Writing 0 flat edges to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_flatEdges.obj"
+Writing 0 open edges to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_openEdges.obj"
+Writing 0 multiple edges to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_multipleEdges.obj"
+Writing 0 region edges to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_regionEdges.obj"
+Writing 82 edge directions to "/mnt/simulations/re200/40steps/constant/extendedFeatureEdgeMesh/cylinder_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/simulations/re200/40steps/constant/triSurface/cylinder.eMesh"
+Extracting curvature of surface at the points.
+Calculating vertex normals
+Calculating face curvature
+
+ExecutionTime = 0 s  ClockTime = 1 s
+
+End
+

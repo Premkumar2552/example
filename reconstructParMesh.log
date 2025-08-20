@@ -1,0 +1,73 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _f00230df-20250528 OPENFOAM=2412 patch=250528 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh -constant
+Date   : Aug 20 2025
+Time   : 13:18:27
+Host   : ip-172-31-2-15.eu-west-2.compute.internal
+PID    : 557639
+I/O    : uncollated
+Case   : /mnt/simulations/re200/40steps
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 3 processor directories
+    Reading database "40steps/processor0"
+    Reading database "40steps/processor1"
+    Reading database "40steps/processor2"
+
+Time = constant
+
+
+Writing merged mesh to "constant/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "40steps/processor0"
+Writing addressing : "40steps/processor0/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "40steps/processor1"
+Writing addressing : "40steps/processor1/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "40steps/processor2"
+Writing addressing : "40steps/processor2/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+End
+
